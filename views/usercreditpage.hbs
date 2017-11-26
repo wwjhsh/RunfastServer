@@ -1,0 +1,117 @@
+<link rel="stylesheet" href="stylesheets/userpage.css">
+<!-- Status bar overlay for full screen mode (PhoneGap) -->
+<!--<div class="statusbar-overlay"></div>-->
+<!-- Views -->
+<div class="views">
+    <!-- Your main view, should have "view-main" class -->
+    <div class="view view-main">
+        <!-- Top Navbar-->
+        <!--<div class="navbar">-->
+        <!--<div class="navbar-inner " style="background-color: #4cd964;">-->
+        <!--&lt;!&ndash; We need cool sliding animation on title element, so we have additional "sliding" class &ndash;&gt;-->
+        <!--<div class="center sliding" style="color: white;">我的</div>-->
+        <!--<div class="right">-->
+        <!--&lt;!&ndash;-->
+        <!--Right link contains only icon - additional "icon-only" class-->
+        <!--Additional "open-panel" class tells app to open panel when we click on this link-->
+        <!--&ndash;&gt;-->
+        <!--<a href="#" class="link icon-only open-panel"><i class="icon icon-bars-blue"></i></a>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+
+        <!-- Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages">
+            <!-- Page, "data-page" contains page name -->
+            <div data-page="index" class="page">
+
+                <!-- Scrollable page content -->
+                <div class="page-content">
+                    <div class="mine-top" style="background-color: #4cd964;">
+                        <div class="mine-statusbar"></div>
+                        <div class="mine-navbar">
+                            <div class="mine-button-left">
+                                <a href="#index" class="link icon-only open-panel back"><i class="icon" style="background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAnCAYAAAALkrgzAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTMyIDc5LjE1OTI4NCwgMjAxNi8wNC8xOS0xMzoxMzo0MCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUuNSAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6ODNBMkI3QzkzMjMzMTFFNzhCNTk4M0RDMjY2QjY0RDkiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6ODNBMkI3Q0EzMjMzMTFFNzhCNTk4M0RDMjY2QjY0RDkiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4M0EyQjdDNzMyMzMxMUU3OEI1OTgzREMyNjZCNjREOSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4M0EyQjdDODMyMzMxMUU3OEI1OTgzREMyNjZCNjREOSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PvyapGEAAAD4SURBVHjatNfNCcIwGAbgpvTq0Q3aDqETdSAnSFfRDTwpeFaPDhDfFAuxVJPvL/BC0sNDCPn56kIIlWLbIK/YqRXRFrkiQxw0iugJ2SIHrRmnaGwO2VVxjQXpkEf4biPiTNBpQ1igXDiLcuAilAoXoxSYhJbCZLQEZqE5mI3+g0XoL3gN9RR0DVZBl7AamsKq6AzXyHmB3pBGcqXOnd5ixib48kNvsStUccrJ89KTp4Jzbjcvvd1EuOQF8dIXhIVrvNJe+kqTcM1KyEsrIdPaLYs7hV+FDjkm9XFso0bhfUH2yPMzDlMhLlyKNC1yR4Y4dlZ/TW8BBgB/it+700NzfQAAAABJRU5ErkJggg==')"></i></a>
+                            </div>
+                            <div class="mine-pagetitle">我的信用</div>
+                        </div>
+                        <canvas id="meter" width="400" height="220"></canvas>
+                    </div>
+                    <div class="mine-contain">
+                        <div class="mine-list">
+                            <div class="mine-list-left"><i class="icon" style="background-image: url('images/icon_tip.png');"></i>信用分达到650，可多抢一单！</div>
+                            <div class="mine-list-right"><span>已获得</span></div>
+                        </div>
+                    </div>
+                    <div class="mine-contain">
+                        <div class="credit-icons">
+                            <div class="credit-icon-item">
+                                <img src="images/icon_xinyongzhangdan.png"/>
+                                <h3>信用账单</h3>
+                            </div>
+
+                            <div class="credit-icon-item">
+                                <img src="images/icon_xinyongshouhu.png"/>
+                                <h3>信用守护</h3>
+                            </div>
+                            <div class="credit-icon-item center">
+                                <img src="images/icon_xinyongfen.png"/>
+                                <h3>信用：<span id="credit-num">698</span>分</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mine-contain" id="credit-detail">
+                        <div class="mine-title">
+                            <div class="mine-title-left">明细</div>
+                            <div class="mine-title-right">近30天记录</div>
+                        </div>
+                        <div class="detail-list">
+                            <div class="detail-number-change">+0.1</div>
+                            <div class="detail-message">准时配送-阿达的美食店</div>
+                            <div class="detail-time">2017/03/18 09:23</div>
+                        </div>
+                        <div class="mine-line"></div>
+                        <div class="detail-list">
+                            <div class="detail-number-change">+0.1</div>
+                            <div class="detail-message">准时配送-阿达的美食店</div>
+                            <div class="detail-time">2017/03/08 09:23</div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="javascript/framework7.min.js"></script>
+<script src="javascript/chart.js"></script>
+<script type="text/javascript" src="javascript/userpage.js"></script>
+<script>
+//        window.onload = function(){
+            Meter.setOptions({
+                element: 'meter',
+                centerPoint: {
+                    x: 180,
+                    y: 180
+                },
+                radius: 180,
+                data: {
+                    value: 698,
+                    title: '{t}',
+                    subTitle: '评估时间：2015.07.28',
+                    area: [{
+                        min: 350, max: 550, text: '较差'
+                    },{
+                        min: 550, max: 600, text: '中等'
+                    },{
+                        min: 600, max: 650, text: '良好'
+                    },{
+                        min: 650, max: 700, text: '优秀'
+                    },{
+                        min: 700, max: 950, text: '极好'
+                    }]
+                }
+            }).init();
+//        }
+</script>
